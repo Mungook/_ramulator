@@ -134,7 +134,7 @@ public:
         if (type != Type::RoBaRaCoCh && spec->standard_name.substr(0, 5) == "LPDDR")
             assert((sz[int(T::Level::Row)] & (sz[int(T::Level::Row)] - 1)) == 0);
 
-        max_address = spec->channel_width / 8;
+        max_address = spec->channel_width / 8; //channel_width = 64bits
 
         for (unsigned int lev = 0; lev < addr_bits.size(); lev++) {
           addr_bits[lev] = calc_log2(sz[lev]);
@@ -142,6 +142,7 @@ public:
         }
 
         addr_bits[int(T::Level::MAX) - 1] -= calc_log2(spec->prefetch_size);
+        // prefetch_size bit why...? why column bit... prefetch...?
 
         // Initiating translation
         if (configs.contains("translation")) {
@@ -308,12 +309,21 @@ public:
         req.addr_vec.resize(addr_bits.size());
         long addr = req.addr;
         int coreid = req.coreid;
-
+        
+        // test addr print of dram trace
+        //printf("Address: %lx  \n",addr);
+        //
         // Each transaction size is 2^tx_bits, so first clear the lowest tx_bits bits
         clear_lower_bits(addr, tx_bits);
-
+        
         if (use_mapping_file){
             apply_mapping(addr, req.addr_vec);
+
+            // // is it 41 bits...?
+            // for(int i=0; i<5; i++){
+            // printf("addr_bit[%d] = %d\n", i, addr_bits[i]);
+            // printf("req.addr_vec[%d] = %d\n", i, req.addr_vec[i]);
+            // }
         }
         else {
             switch(int(type)){
@@ -321,17 +331,23 @@ public:
                     for (int i = addr_bits.size() - 1; i >= 0; i--)
                         req.addr_vec[i] = slice_lower_bits(addr, addr_bits[i]);
                     break;
-                case int(Type::RoBaRaCoCh):
-                    req.addr_vec[0] = slice_lower_bits(addr, addr_bits[0]);
-                    req.addr_vec[addr_bits.size() - 1] = slice_lower_bits(addr, addr_bits[addr_bits.size() - 1]);
-                    for (int i = 1; i <= int(T::Level::Row); i++)
-                        req.addr_vec[i] = slice_lower_bits(addr, addr_bits[i]);
-                    break;
+                case int(Type::RoBaRaCoCh): //////// slice sequence = level sequence..?
+                    req.addr_vec[int(T::Level::Channel)] = slice_lower_bits(addr, addr_bits[int(T::Level::Channel)]);
+                    req.addr_vec[int(T::Level::Row)] = slice_lower_bits(addr, addr_bits[int(T::Level::Row)]);
+                    req.addr_vec[int(T::Level::Rank)] = slice_lower_bits(addr, addr_bits[int(T::Level::Rank)]);
+                    req.addr_vec[int(T::Level::Bank)] = slice_lower_bits(addr, addr_bits[int(T::Level::Bank)]);
+                    req.addr_vec[int(T::Level::Column)] = slice_lower_bits(addr, addr_bits[int(T::Level::Column)]);
+                    break;     
                 default:
                     assert(false);
             }
+            
+            // // is it 41 bits...?
+            // for(int i=0; i<5; i++){
+            // printf("addr_bit[%d] = %d\n", i, addr_bits[i]);
+            // printf("req.addr_vec[%d] = %d\n", i, req.addr_vec[i]);
+            // }
         }
-
         if(ctrls[req.addr_vec[0]]->enqueue(req)) {
             // tally stats here to avoid double counting for requests that aren't enqueued
             ++num_incoming_requests;
@@ -416,7 +432,9 @@ public:
                             target_max = max(target_bit, target_bit2);
                             while (target_min <= target_max){
                                 mapping_scheme[level][target_min].push_back(source_min);
-                                // cout << target_min << " <- " << source_min << endl;
+                                ////////
+                                //cout << target_min << " <- " << source_min << endl;
+                                ////////
                                 source_min ++;
                                 target_min ++;
                             }
@@ -464,10 +482,15 @@ public:
                 addr_total_bits -= addr_bits[i];
             }
         }
+        /////////////////
+        printf("addr_bits before: %d\n", int(calc_log2(sz[int(T::Level::Row)])));
         // Row address is an integer.
         addr_bits[int(T::Level::Row)] = min((int)sizeof(int)*8, max(addr_total_bits, calc_log2(sz[int(T::Level::Row)])));
-
-        // printf("Address: %lx => ",addr);
+        /////////////////////
+        printf("addr_bits after: %d\n", int(addr_bits[int(T::Level::Row)]));
+        //////////////////
+        
+        //printf("Address: %lx => ",addr);
         for (unsigned int lvl = 0; lvl < int(T::Level::MAX); lvl++)
         {
             unsigned int lvl_bits = addr_bits[lvl];
@@ -481,9 +504,9 @@ public:
                 }
                 addr_vec[lvl] |= (bitvalue << bitindex);
             }
-            // printf("%s: %x, ",T::level_str[lvl].c_str(),addr_vec[lvl]);
+            //printf("%s: %x, ",T::level_str[lvl].c_str(),addr_vec[lvl]);
         }
-        // printf("\n");
+        //printf("\n");
     }
 
     int pending_requests()
