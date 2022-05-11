@@ -333,10 +333,10 @@ public:
                     break;
                 case int(Type::RoBaRaCoCh): //////// slice sequence = level sequence..?
                     req.addr_vec[int(T::Level::Channel)] = slice_lower_bits(addr, addr_bits[int(T::Level::Channel)]);
-                    req.addr_vec[int(T::Level::Row)] = slice_lower_bits(addr, addr_bits[int(T::Level::Row)]);
+                    req.addr_vec[int(T::Level::Column)] = slice_lower_bits(addr, addr_bits[int(T::Level::Column)]);
                     req.addr_vec[int(T::Level::Rank)] = slice_lower_bits(addr, addr_bits[int(T::Level::Rank)]);
                     req.addr_vec[int(T::Level::Bank)] = slice_lower_bits(addr, addr_bits[int(T::Level::Bank)]);
-                    req.addr_vec[int(T::Level::Column)] = slice_lower_bits(addr, addr_bits[int(T::Level::Column)]);
+                    req.addr_vec[int(T::Level::Row)] = slice_lower_bits(addr, addr_bits[int(T::Level::Row)]);
                     break;     
                 default:
                     assert(false);
