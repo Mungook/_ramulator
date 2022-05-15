@@ -13,7 +13,7 @@ CXXFLAGS := -O3 -std=c++11 -g -Wall
 
 .PHONY: all clean depend
 
-all: depend ramulator
+all: depend ramulator_test
 
 clean:
 	rm -f ramulator
@@ -32,7 +32,7 @@ ifneq ($(MAKECMDGOALS),clean)
 endif
 
 
-ramulator: $(MAIN) $(OBJS) $(SRCDIR)/*.h | depend
+ramulator_test: $(MAIN) $(OBJS) $(SRCDIR)/*.h | depend
 	$(CXX) $(CXXFLAGS) -DRAMULATOR -o $@ $(MAIN) $(OBJS)
 
 libramulator.a: $(OBJS) $(OBJDIR)/Gem5Wrapper.o
