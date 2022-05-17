@@ -331,11 +331,13 @@ public:
                     for (int i = addr_bits.size() - 1; i >= 0; i--)
                         req.addr_vec[i] = slice_lower_bits(addr, addr_bits[i]);
                     break;
-                case int(Type::RoBaRaCoCh): //////// slice sequence = level sequence..? // Bank -> BankGroup + Bank ---> consider this
+                case int(Type::RoBaRaCoCh): /////RoCoBa
                     req.addr_vec[0] = slice_lower_bits(addr, addr_bits[0]);
+                    req.addr_vec[int(T::Level::Bank)-1] = slice_lower_bits(addr, addr_bits[int(T::Level::Bank)-1]);
+                    req.addr_vec[int(T::Level::Bank)] = slice_lower_bits(addr, addr_bits[int(T::Level::Bank)]);
+                    req.addr_vec[int(T::Level::Rank)] = slice_lower_bits(addr, addr_bits[int(T::Level::Rank)]);
+                    req.addr_vec[int(T::Level::Row)] = slice_lower_bits(addr, addr_bits[int(T::Level::Row)]);
                     req.addr_vec[addr_bits.size() - 1] = slice_lower_bits(addr, addr_bits[addr_bits.size() - 1]);
-                    for (int i = 1; i <= int(T::Level::Row); i++)
-                        req.addr_vec[i] = slice_lower_bits(addr, addr_bits[i]);
                     break;     
                 default:
                     assert(false);
