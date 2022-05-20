@@ -1,0 +1,1000 @@
+  115  cd ./gem5/
+  116  scons build/X86/gem5.opt -j5
+  117  sudo apt install build-essential git m4 scons zlib1g zlib1g-dev libprotobuf-dev protobuf-compiler libprotoc-dev libgoogle-perftools-dev python-dev python
+  118  scons build/X86/gem5.opt -j5
+  119  sudo apt update
+  120  sudo apt install libprotobuf-dev protobuf-compiler libgoogle-perftools-dev
+  121  python3 `which scons` --clean --no-cache   
+  122  scons --clean --no-cache
+  123  scons build/X86/gem5.opt -j5
+  124  apt remove libprotobuf-dev protobuf-compiler
+  125  sudo apt remove libprotobuf-dev protobuf-compiler
+  126  sudo apt install libprotobuf-dev protobuf-compiler libgoogle-perftools-dev
+  127  scons build/X86/gem5.opt -j5
+  128  gcc --version
+  129  protoc --version
+  130  sudo apt install pip
+  131  sudo apt-get install pip
+  132  apt-get install python-pip
+  133  sudo apt-get install python-pip
+  134  pip
+  135  pip show protobuf
+  136  pip install --upgrade pip
+  137  pip show protobuf
+  138  curl https://bootstrap.pypa.io/2.7/get-pip.py --output get-pip.p
+  139  wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
+  140  python get-pip.py
+  141  pip install --upgrade setuptools
+  142  pip
+  143  pip --version
+  144  pip show protobuf
+  145  sudo apt install libprotobuf-dev protobuf-compiler libgoogle-perftools-dev
+  146  pip show protobuf
+  147  pip show libprotobuf
+  148  sudo apt remove libprotobuf-dev protobuf-compiler
+  149  scons build/X86/gem5.opt -j5
+  150  ls
+  151  cd ./gem5/
+  152  ls
+  153  cd ./gem5/
+  154  ls
+  155  scons build/ARM/gem5.opt -j9
+  156  ls
+  157  cd ./ramulator/
+  158  ls
+  159  vim test_ddr3.py 
+  160  sudo apt install vim
+  161  sudo apt-get install vim
+  162  ls
+  163  vi test_ddr3.py 
+  164  sudo apt-get install vim
+  165  vim
+  166  sudo apt install vim
+  167  sudo apt-get install build-essential
+  168  sudo apt-get install curl
+  169  sudo sh -c 'curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/trusted.gpg.d/microsoft.gpg'
+  170  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+  171  sudo apt-get update
+  172  sudo apt-get install code
+  173  sudo rm /etc/apt/sources.list.d/vscode.list
+  174  code
+  175  cd ./ramulator/
+  176  ls
+  177  ll
+  178  rm -rf .git
+  179  ls
+  180  ll
+  181  ls
+  182  cd ./ramulator/
+  183  ls
+  184  cd ./cputraces/
+  185  ls
+  186  gzip -d 403.gcc.gz
+  187  ls
+  188  cd ..
+  189  ./ramulator configs/DDR3-config.cfg --mode=cpu --stats test_output.txt ./cputraces/403.gcc 
+  190  code test_output.txt 
+  191  git
+  192  git init
+  193  git status
+  194  git rm cputraces/403.gcc.gz 
+  195  git add DDR3.stats 
+  196  git add cputraces/403.gcc 
+  197  git add test_output.txt 
+  198  git commit -m "gcc DDR3 simulate test file"
+  199  git config --global user.email "qkrantjd01@gmail.com"
+  200  git config --global user.name "Mungook"
+  201  git commit -m "gcc DDR3 simulate test file"
+  202  git status
+  203  git remote add origin https://github.com/Mungook/ramulator
+  204  git log
+  205  git init
+  206  git remote add origin https://github.com/Mungook/ramulator
+  207  git remote add origin https://github.com/Mungook/_ramulator.git
+  208  git branch -M main
+  209  git push -u origin main
+  210  git remote rm origin
+  211  git remote add origin https://github.com/Mungook/_ramulator.git
+  212  git branch -M main
+  213  git push -u origin master
+  214  git push origin master
+  215  git remote add origin https://github.com/Mungook/_ramulator.git
+  216  git status
+  217  git add .
+  218  git commit -m "initial commit"
+  219  git push origin master
+  220  git remote remove origin
+  221  git remote add origin
+  222  git remote add origin https://github.com/Mungook/_ramulator.git
+  223  git push origin master
+  224  git push -u origin master
+  225  ping github.com
+  226  nslookup github.com
+  227  ping github.com
+  228  git push -u origin master
+  229  ls
+  230  cd ./ramulator/
+  231  ls
+  232  cd ./configs/
+  233  ls
+  234  code DDR3-config.cfg 
+  235  cd ..
+  236  ./ramulator ./configs/DDR3-config.cfg --mode=cpu --stats=trace_test.txt ./cputraces/403.gcc 
+  237  ./ramulator ./configs/DDR3-config.cfg --mode=cpu --stats trace_test.txt ./cputraces/403.gcc 
+  238  ls
+  239  ./trace_generator/
+  240  cd ./trace_generator/
+  241  ls
+  242  vim README.md 
+  243  cd ..
+  244  ls
+  245  code cmd-trace-chan-0-rank-0.cmdtrace 
+  246  ./ramulator ./configs/DDR3-config.cfg --mode=cpu --stats trace_test.txt ./cputraces/403.gcc 
+  247  git add 
+  248  git status
+  249  git add cmd-trace-chan-0-rank-0.cmdtrace 
+  250  git trace_test.txt
+  251  git add trace_test.txt 
+  252  git commit -m "trace config change"
+  253  git push origin master
+  254  ls
+  255  cd ./ramulator/
+  256  ls
+  257  cd ./cputraces/
+  258  cd ..
+  259  cd ./src/
+  260  ls
+  261  code Processor.cpp
+  262  code Processor.h
+  263  cd ..
+  264  grep -Rl "cores" ./
+  265  code ./src/Main.cpp 
+  266  ls
+  267  git clone https://github.com/CMU-SAFARI/VAMPIRE.git
+  268  cd ./VAMPIRE/
+  269  ls
+  270  make -j
+  271  make tests
+  272  ls
+  273  cd ./configs/
+  274  ls
+  275  vim default.cfg 
+  276  cd ../..
+  277  ls
+  278  cd ./ramulator/
+  279  cd ./configs/
+  280  ls
+  281  vim DDR3-config.cfg 
+  282  cd ../..
+  283  ks
+  284  ls
+  285  cd ./V
+  286  cd ./VAMPIRE/
+  287  ls
+  288  cd ./configs/
+  289  ls
+  290  vim ./default.cfg 
+  291  cd ../../ramulator/
+  292  ls
+  293  cd ./mappings/
+  294  ls
+  295  vim row_interleaving.map 
+  296  vim row_interleaving_randomized.map.map 
+  297  vim row_interleaving_randomized.map
+  298  cd ../..
+  299  ls
+  300  cd ./VAMPIRE/
+  301  ls
+  302  ./vampire -f ../ramulator/cmd-trace-chan-0-rank-0.cmdtrace -v B -c configs/default.cfg -d RD_WR
+  303  cd ./configs/
+  304  vim default.cfg 
+  305  cd ..
+  306  ./vampire -f ../ramulator/cmd-trace-chan-0-rank-0.cmdtrace -v B -c configs/default.cfg -d RD_WR
+  307  cd ../ramulator/
+  308  ls
+  309  cd ./configs/
+  310  ls
+  311  cd ..
+  312  ls
+  313  cd ./configs/
+  314  ls
+  315  vim DDR3-config.cfg 
+  316  cd ../..
+  317  ls
+  318  cd ./VAMPIRE/
+  319  ls
+  320  cd ./configs/
+  321  vim default.cfg 
+  322  cd ../..
+  323  ls
+  324  cd ./ramulator/
+  325  ls
+  326  cd ./configs/
+  327  ls
+  328  vim DDR3-config.cfg 
+  329  ls
+  330  cd ./ramulator/
+  331  ls
+  332  cd ./mappings/
+  333  ls
+  334  cd ..
+  335  ls
+  336  cd ./src/
+  337  ls
+  338  code DDR3.h
+  339  cd ..
+  340  grep -Rl "org_entry" ./
+  341  ls
+  342  cd ./src/
+  343  ls
+  344  code Config.h
+  345  cd ..
+  346  ls
+  347  code ramulator 
+  348  cd ./src/
+  349  ls
+  350  code Config.h
+  351  code Config.cpp
+  352  cd ..
+  353  code Makefile 
+  354  cd ..
+  355  make -h
+  356  cd ./ramulator/
+  357  make
+  358  make -j
+  359  ls
+  360  make clean
+  361  make -j
+  362  ls
+  363  ./ramulator_test ./configs/DDR3-config.cfg --mode= 
+  364  ./ramulator_test --mode=cpu
+  365  ./ramulator_test ./configs/DDR3-config.cfg --mode=cpu --stats 
+  366  ./ramulator_test ./configs/DDR3-config.cfg --mode=cpu 
+  367  grep -Rl "DSARP" ./
+  368  ls
+  369  cd ./src/
+  370  code Refresh.h
+  371  grep -Rl "speed_entry" ./
+  372  code DSARP.h
+  373  code DSARP.cpp
+  374  grep -Rl "configs["mapping"]" ./
+  375  grep -Rl "configs["standard"]" ./
+  376  grep -Rl "mapping" ./
+  377  code Memory.h
+  378  cd ..
+  379  make clean
+  380  make -j
+  381  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram --stats print_test.txt dram.trace 
+  382  code print_test.txt 
+  383  rm -rf print_test.txt 
+  384  make clean
+  385  cd ./mappings/
+  386  ls
+  387  cd ..
+  388  make -j
+  389  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram --stats print_test.txt --mapping row_interleaving.map dram.trace 
+  390  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram --stats print_test.txt --mapping ./mappings/row_interleaving.map dram.trace 
+  391  cd ./mappings/
+  392  code row_interleaving.map 
+  393  cd ..
+  394  make clean
+  395  make 0j
+  396  make -j
+  397  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram --stats print_test.txt  dram.trace 
+  398  cd ./src/
+  399  ls
+  400  code Request.h 
+  401  grep -Rl "level" ./
+  402  code DDR3.h
+  403  code DDR3.cpp
+  404  code DRAM.h
+  405  grep -Rl "org_table" ./
+  406  grep -Rl "get_dramtrace_request" ./
+  407  cd ..
+  408  make clean
+  409  make -j
+  410  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram --stats print_test.txt  dram.trace 
+  411  grep -Rl "slice_lower_bits" ./
+  412  cd ./src/
+  413  ls
+  414  code Config.cpp
+  415  ls
+  416  cd ..
+  417  gdb
+  418  gdb ./ramulator_test 
+  419  make clean
+  420  make -j
+  421  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram --stats print_test.txt --mapping ./mappings/row_interleaving.map dram.trace 
+  422  grep -Rl "<-" ./
+  423  gdb ./ramulator_test 
+  424  cd ./src/
+  425  ls
+  426  cd ..
+  427  make clean
+  428  make -j
+  429  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram dram.trace 
+  430  make clean
+  431  make -j
+  432  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram dram.trace 
+  433  make clean
+  434  make -j
+  435  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram dram.trace 
+  436  make clean
+  437  make -j
+  438  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram dram.trace 
+  439  make clean
+  440  make -j
+  441  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram dram.trace 
+  442  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram --mapping ./mappings/row_interleaving.map dram.trace 
+  443  make clean
+  444  make -j
+  445  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram --mapping ./mappings/row_interleaving.map dram.trace 
+  446  make clean
+  447  make -j
+  448  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram --mapping ./mappings/row_interleaving.map dram.trace 
+  449  make clean
+  450  make -j
+  451  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram --mapping ./mappings/row_interleaving.map dram.trace 
+  452  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram dram.trace 
+  453  make clean
+  454  make -j
+  455  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram dram.trace 
+  456  ./ramulator_test ./configs/DDR3-config.cfg --mode=dram --mapping ./mappings/row_interleaving.map dram.trace 
+  457  make clean
+  458  ls ./ramulator/
+  459  git status
+  460  ll
+  461  git init
+  462  git status
+  463  git add .
+  464  git commit -m "initial commit"
+  465  git push origin master
+  466  history
+  467  cd ./ramulator/
+  468  ls
+  469  make clean
+  470  make -j
+  471  ./ramulator_test configs/DDR3-config.cfg --mode=dram
+  472  ./ramulator_test configs/DDR3-config.cfg --mode=dram dram.trace
+  473  ls
+  474  code DDR3.stats 
+  475  make clean
+  476  make -j
+  477  ./ramulator_test configs/DDR3-config.cfg --mode=dram dram.trace
+  478  code DDR3.stats 
+  479  ./ramulator_test configs/DDR3-config.cfg --mode=cpu ./cputraces/403.gcc 
+  480  code DDR3.stats 
+  481  make clean
+  482  make -j
+  483  ./ramulator_test configs/DDR3-config.cfg --mode=cpu ./cputraces/403.gcc 
+  484  code DDR3.stats 
+  485  make clean
+  486  make -j
+  487  ./ramulator_test configs/DDR3-config.cfg --mode=cpu ./cputraces/403.gcc 
+  488  code DDR3.stats 
+  489  make clean
+  490  make -j
+  491  ./ramulator_test configs/DDR3-config.cfg --mode=cpu ./cputraces/403.gcc 
+  492  make clean
+  493  make -j
+  494  ./ramulator_test configs/DDR3-config.cfg --mode=cpu ./cputraces/403.gcc 
+  495  code DDR3.stats 
+  496  make clean
+  497  ls
+  498  mv DDR3.stats DDR3_BaRo.stats
+  499  make -j
+  500  ./ramulator_test configs/DDR3-config.cfg --mode=cpu ./cputraces/403.gcc 
+  501  code DDR3_BaRo.stats 
+  502  make clean
+  503  make -j
+  504  ./ramulator_test configs/DDR3-config.cfg --mode=cpu ./cputraces/403.gcc 
+  505  ls
+  506  cd ./ramulator/
+  507  ls
+  508  make clean
+  509  make -j
+  510  ./ramulator_test configs/DDR3-config.cfg --mode=cpu --stats RoBaCo.txt ./cputraces/403.gcc 
+  511  make clean
+  512  make -j
+  513  ./ramulator_test configs/DDR3-config.cfg --mode=cpu --stats BaRoCo.txt ./cputraces/403.gcc 
+  514  code BaRoCo.txt 
+  515  code RoBaCo.txt 
+  516  make clean
+  517  make -j
+  518  ./ramulator_test configs/DDR3-config.cfg --mode=cpu --stats BaCoRo.txt ./cputraces/403.gcc 
+  519  code BaCoRo.txt 
+  520  make clean
+  521  make -j
+  522  ./ramulator_test configs/DDR3-config.cfg --mode=cpu --stats RoCoBa.txt ./cputraces/403.gcc 
+  523  ls
+  524  code RoCoBa.txt 
+  525  make clean
+  526  make -j
+  527  ./ramulator_test configs/DDR3-config.cfg --mode=cpu --stats CoRoBa.txt ./cputraces/403.gcc 
+  528  code CoRoBa.txt 
+  529  make clean
+  530  make -j
+  531  ./ramulator_test configs/DDR3-config.cfg --mode=cpu --stats CoBaRo.txt ./cputraces/403.gcc 
+  532  code CoBaRo.txt 
+  533  ls
+  534  cd ./ramulator/
+  535  ls
+  536  git status
+  537  git add .
+  538  git commit -m "add address mapping scheme"
+  539  git push origin master
+  540  ls
+  541  cd ./ramulator/
+  542  ls
+  543  cd ./src/
+  544  ls
+  545  code Controller.h
+  546  ls
+  547  code DDR4.h
+  548  cd ./ramulator/
+  549  cd ./cputraces/
+  550  ls
+  551  cd ..
+  552  code dram.trace
+  553  make clean
+  554  make -j
+  555  cd ./src/
+  556  code DDR3.h
+  557  cd ..
+  558  git add . 
+  559  git commit -m "before modifying to DDR4 save status"
+  560  git push origin master
+  561  make clean
+  562  make -j
+  563  ./ramulator_test ./configs/DDR4-config.cfg 
+  564  ./ramulator_test ./configs/DDR4-config.cfg mode=dram ./dram.trace 
+  565  code DDR4.stats 
+  566  code ./configs/DDR4-config.cfg 
+  567  code scen1.trace
+  568  code DDR4.stats 
+  569  code dram.trace 
+  570  ./ramulator_test ./configs/DDR4-config.cfg mode=dram --stats scen1_output.txt ./scen1.trace 
+  571  code scen1_output.txt 
+  572  ./ramulator_test ./configs/DDR4-config.cfg mode=dram --stats scen1_output.txt ./scen1.trace 
+  573  code scen1_output.txt 
+  574  ./ramulator_test ./configs/DDR4-config.cfg mode=dram --stats scen1_output.txt ./scen1.trace 
+  575  code scen1_output.txt 
+  576  ./ramulator_test ./configs/DDR4-config.cfg mode=dram --stats scen1_output.txt ./scen1.trace 
+  577  code scen2.trace
+  578  ./ramulator_test ./configs/DDR4-config.cfg mode=dram --stats scen2_output.txt ./scen2.trace 
+  579  code scen2_output.txt 
+  580  code scen3.trace
+  581  ./ramulator_test ./configs/DDR4-config.cfg mode=dram --stats scen3_output.txt ./scen3.trace 
+  582  code scen3_output.txt 
+  583  ./ramulator_test ./configs/DDR4-config.cfg mode=dram --stats scen3_output.txt ./scen3.trace 
+  584  code scen3_output.txt 
+  585  ./ramulator_test ./configs/DDR4-config.cfg mode=dram --stats scen2_output.txt ./scen2.trace 
+  586  ./ramulator_test ./configs/DDR4-config.cfg mode=dram --stats scen3_output.txt ./scen3.trace 
+  587  ./ramulator_test ./configs/DDR4-config.cfg mode=dram --stats scen2_output.txt ./scen2.trace 
+  588  ./ramulator_test ./configs/DDR4-config.cfg mode=dram --stats scen3_output.txt ./scen3.trace 
+  589  git status
+  590  git add .
+  591  git commit -m "add scenario"
+  592  git push origin
+  593  git push origin master
+  594  ls
+  595  grep -Ril "cmd-trace-chan-0-rank-0.cmdtrace" ./
+  596  grep -Ril "cmd-trace-chan-0-rank-0.cmdtrace" ./src/
+  597  grep -Ril "cmd-trace" ./src/
+  598  cd ./src
+  599  code Controller.
+  600  code Controller.h
+  601  ls
+  602  code Config.h
+  603  grep -Ril "command_name" ./src/
+  604  grep -Ril "command_name" ../
+  605  grep -Ril "spec" ../
+  606  cd ..
+  607  ls
+  608  code RoBaCo.txt 
+  609  code BaRoCo.txt 
+  610  code dram.trace 
+  611  ls
+  612  code scen1.trace 
+  613  code scen1_output.txt 
+  614  code scen2_output.txt 
+  615  code scen3_output.txt 
+  616  ./ramulator_test ./configs/DDR4-config.cfg mode=dram --stats scen3_output.txt ./scen3.trace 
+  617  grep -Ril "DSARP" ./
+  618  code ./src/Refresh.h
+  619  code ./src/Refresh.cpp
+  620  code ./src/Memory.h
+  621  code ./src/Memory.cpp
+  622  cd ./ramulator/
+  623  code scen2_output.txt 
+  624  code ./src/Memory.h
+  625  git status
+  626  git add .
+  627  git commit -m "check scenario"
+  628  git push origin master
+  629  ls
+  630  cd ./ramulator/
+  631  ls
+  632  mkdir outputs
+  633  mv outputs BaCoRo.txt 
+  634  mv BaCoRo.txt outputs
+  635  ls
+  636  mv BaRoCo.txt CoRoBa.txt CoBaRo.txt outputs
+  637  ls
+  638  mv test_output.txt trace_test.txt print_test.txt RoCoBa.txt RoBaCo.txt 
+  639  mv test_output.txt trace_test.txt print_test.txt RoCoBa.txt RoBaCo.txt outputs
+  640  ls
+  641  mkdir scen_trces
+  642  mv scen1.trace scen2.trace scen3.trace scen_trces/
+  643  ls
+  644  rm -rf DDR3_BaRo.stats 
+  645  ls
+  646  rm -rf cmd-trace-chan-0-rank-0.cmdtrace 
+  647  ls
+  648  mv scen2_output.txt scen3_output.txt outputs
+  649  ls
+  650  mv scen1_output.txt outputs
+  651  ls
+  652  mv ramulator_test ramulator_RoBaCo
+  653  ls
+  654  rm -rf DDR3.stats DDR4.stats 
+  655  ls
+  656  mv cpu.trace dram.trace scen_trces/
+  657  ls
+  658  git status
+  659  git add .
+  660  git commit -m "reorganize directory"
+  661  git push origin master
+  662  ls
+  663  cd ./outputs/
+  664  ls
+  665  code RoBaCo.txt 
+  666  cd ..
+  667  grep -Ril "transaction_bytes" ./
+  668  code ./src/Controller.h
+  669  grep -Ril "cacheline" ./
+  670  code ./src/Processor.
+  671  code ./src/Processor.h
+  672  code ./mappings/README.md 
+  673  make clean
+  674  ls
+  675  make -j
+  676  ls
+  677  mv ramulator_test ramulator_BaRoCo
+  678  make clean
+  679  ls
+  680  mkae -j
+  681  ls
+  682  make clean
+  683  make -j
+  684  ls
+  685  cd ./cputraces/
+  686  ls
+  687  gzip -d 459.GemsFDTD.gz 
+  688  ls
+  689  cd ..
+  690  ls
+  691  ./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/GemsFDTD_RoBaCo.txt ./cputraces/459.GemsFDTD 
+  692  code outputs/GemsFDTD_RoBaCo.txt 
+  693  mv ramulator_test ramulator_BaCoRo
+  694  ./ramulator_BaCoRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/GemsFDTD_BaRoCo.txt ./cputraces/459.GemsFDTD 
+  695  cd ./outputs/
+  696  ls
+  697  mv GemsFDTD_BaRoCo.txt GemsFDTD_BaCoRo.txt
+  698  ls
+  699  cd ..
+  700  cd ./outputs/
+  701  rm -rf GemsFDTD_BaCoRo.txt GemsFDTD_RoBaCo.txt 
+  702  cd ..
+  703  ./ramulator_BaRoCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/GemsFDTD_BaRoCo.txt ./cputraces/459.GemsFDTD 
+  704  ./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/GemsFDTD_RoBaCo.txt ./cputraces/459.GemsFDTD 
+  705  ./ramulator_BaCoRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/GemsFDTD_BaCoRo.txt ./cputraces/459.GemsFDTD 
+  706  code ./outputs/GemsFDTD_BaRoCo.txt 
+  707  code ./outputs/GemsFDTD_RoBaCo.txt 
+  708  code ./outputs/GemsFDTD_BaCoRo.txt 
+  709  grep -Ril "dram_cycles" ./
+  710  code ./src/Controller.h
+  711  code ./src/Controller.cpp
+  712  git add .
+  713  git status
+  714  git commit -m "GemsFDTD output"
+  715  git push origin master
+  716  ls
+  717  cd ./ramulator/
+  718  ls
+  719  git add ramulator_BaCoRo 
+  720  git status
+  721  ll
+  722  code ./gitignore
+  723  code ./.gitignore
+  724  git status
+  725  git add .
+  726  git commint -m "update gitignore"
+  727  git commit -m "update gitignore"
+  728  git status
+  729  git add .
+  730  git status
+  731  git push origin master
+  732  git status
+  733  git add . 
+  734  git commit -m "revert ignore"
+  735  git push origin master
+  736  ls
+  737  cd ./cputraces/
+  738  ls
+  739  rm -rf 401.bzip2.gz 436.cactusADM.gz 444.namd.gz 447.dealII.gz 456.hmmer.gz 464.h264ref.gz 471.omnetpp.gz 481.wrf.gz 483.xalancbmk.gz 403.gcc 433.milc.gz 435.gromacs.gz 437.leslie3d.gz 445.gobmk.gz 458.sjeng.gz 462.libquantum.gz 470.lbm.gz 473.astar.gz 482
+  740  rm -rf 401.bzip2.gz 436.cactusADM.gz 444.namd.gz 447.dealII.gz 456.hmmer.gz 464.h264ref.gz 471.omnetpp.gz 481.wrf.gz 483.xalancbmk.gz 403.gcc 433.milc.gz 435.gromacs.gz 437.leslie3d.gz 445.gobmk.gz 458.sjeng.gz 462.libquantum.gz 470.lbm.gz 473.astar.gz 482.sphinx3.gz 
+  741  ls
+  742  gzip -d 429.mcf.gz
+  743  gzip -d 434.zeusmp.gz 
+  744  gzip -d 450.soplex.gz 
+  745  ls
+  746  cd ..
+  747  ./ramulator_BaCoRo ./configs/DDR4-config.cfg --mode=cpu --stats mcf_BaCoRo.txt ./cputraces/429.mcf 
+  748  git status
+  749  git add .
+  750  git commit -m "mcf_bacoro"
+  751  git push origin master
+  752  ll
+  753  code .gitignore
+  754  git rm -r --cached .
+  755  git add .
+  756  git commit -m "update gitignore"
+  757  git status
+  758  git push origin master
+  759  git rm -r --cached cputraces/
+  760  git rm -r --cached cputraces/429.mcf cputraces/434.zeusmp cputraces/450.soplex cputraces/459.GemsFDTD 
+  761  git rm -r --cached ./cputraces/429.mcf cputraces/434.zeusmp cputraces/450.soplex cputraces/459.GemsFDTD 
+  762  cd ./cputraces/
+  763  ll
+  764  git rm -r --cached 429.mcf 
+  765  git rm -r --cached ./429.mcf 
+  766  cd ..
+  767  git rm -r --cached .
+  768  git add -A
+  769  git commit -m "update ignore"
+  770  git push origin master
+  771  ls
+  772  git status
+  773  ls
+  774  git status
+  775  git history
+  776  git add .
+  777  git push origin master
+  778  mkdir cputraces
+  779  mv cputraces cputraces_
+  780  ls
+  781  git status
+  782  git add .
+  783  git status
+  784  git add .
+  785  git commit -m "update ignore"
+  786  mv cputraces_/ cputraces__/
+  787  git status
+  788  git add .
+  789  git commit -m "update ignore"
+  790  git push origin master
+  791  ls
+  792  mv cputraces__/ cputraces
+  793  ls
+  794  cd ./ramulator/
+  795  ls
+  796  grep -Ril "transaction" ./
+  797  code Memory.h
+  798  code ./src/Memory
+  799  code ./src/Memory.h
+  800  code ./src/Controller.h
+  801  code ./outputs/mcf_BaCoRo.txt 
+  802  grep -Ril "read_requests" ./
+  803  cd ./ramulator/
+  804  ls
+  805  mv mcf_BaCoRo.txt ./outputs/
+  806  ls
+  807  cd ./outputs/
+  808  ls
+  809  mkdir test
+  810  ls
+  811  cd ..
+  812  ./ramulator_BaRoCo ./configs/DDR4-config.cfg --mode=cpu --stats mcf_BaRoCo.txt ./cputraces/429.mcf 
+  813  ./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats mcf_RoBaCo.txt ./cputraces/429.mcf 
+  814  ./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats mcf_RoBaCo.txt ./cputraces/434.zeusmp 
+  815  ./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats mcf_RoBaCo.txt ./cputraces/429.mcf 
+  816  ./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats zeusmp_RoBaCo.txt ./cputraces/434.zeusmp 
+  817  ./ramulator_BaRoCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/zeusmp_BaRoCo.txt ./cputraces/434.zeusmp 
+  818  time ./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/zeusmp_RoBaCo.txt ./cputraces/434.zeusmp 
+  819  time ./ramulator_BaRoCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/zeusmp_BaRoCo.txt ./cputraces/434.zeusmp 
+  820  time ./ramulator_BaCoRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/zeusmp_BaCoRo.txt ./cputraces/434.zeusmp 
+  821  code ./outputs/zeusmp_BaCoRo.txt 
+  822  time ./ramulator_BaCoRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/soplex_BaCoRo.txt ./cputraces/450.soplex 
+  823  time ./ramulator_BaRoCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/soplex_BaRoCo.txt ./cputraces/450.soplex 
+  824  time ./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/soplex_RoBaCo.txt ./cputraces/450.soplex 
+  825  cd ./outputs/
+  826  ls
+  827  cd ..
+  828  ls
+  829  cd ./ramulator/
+  830  grep -Ril "frequency" ./
+  831  grep -Ril "freq" ./
+  832  cd ./src/
+  833  ls
+  834  code DDR4.cpp
+  835  code Main.cpp 
+  836  cd ..
+  837  cd ./configs/DDR4
+  838  ls
+  839  cd ./configs/
+  840  ls
+  841  code DDR4-config.cfg 
+  842  cd ..
+  843  grep -Ril "freq" ./
+  844  grep -Ril "speed_entry" ./
+  845  code ./src/SpeedyController.h 
+  846  grep -Ril "tCK" ./
+  847  grep -Ril "clk_ns" ./
+  848  grep -Ril "clk" ./
+  849  code ./src/Controller.h
+  850  git add .
+  851  git status
+  852  git commit -m "mapping simulated"
+  853  git push origin master
+  854  cd ./ramulator/
+  855  git push origin master
+  856  cd ..
+  857  mv ./ramulator/ ./_ramulator
+  858  mv ._/ramulator/ ./ramulator
+  859  mv ./_ramulator/ ./ramulator
+  860  git clone https://github.com/Mungook/_ramulator.git
+  861  mv ./ramulator/* ./_ramulator/
+  862  mv -f ./ramulator/* ./_ramulator/
+  863  rsync
+  864  rsync ./ramulator/ ./_ramulator/
+  865  cd ./_ramulator/
+  866  ls
+  867  cd ./outputs/
+  868  ls
+  869  cd ..
+  870  cd ./cputraces/
+  871  ls
+  872  cd ..
+  873  git push origin master
+  874  git status
+  875  cd ./outputs/
+  876  ls
+  877  cd ../../ramulator/
+  878  ls
+  879  cd ./outputs/
+  880  ls
+  881  cd ..
+  882  ll
+  883  cd ../_ramulator/
+  884  ls
+  885  git status
+  886  git add .
+  887  git commit -m "add outputs"
+  888  git push origin master
+  889  ls
+  890  cd ./_ramulator/
+  891  ls
+  892  cd ./src/
+  893  ls
+  894  code Memory
+  895  code Memory.h
+  896  cd ..
+  897  cd ../
+  898  cd ./ramulator/
+  899  ls
+  900  cd ./src/
+  901  ls
+  902  code Memory.h
+  903  cd ..
+  904  make clean
+  905  ls
+  906  mv ./src/Memory.h ../_ramulator/src/Memory.h
+  907  cd ../_ramulator/
+  908  make clean
+  909  ls
+  910  make -j
+  911  mv ./ramulator_test ramulator_RoCoBa
+  912  make clean
+  913  make -j
+  914  mv ./ramulator_test ramulator_CoRoBa
+  915  make clean
+  916  make -j
+  917  mv ./ramulator_test ramulator_CoBaRo
+  918  code Makefile 
+  919  ./ramulator_CoBaRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/mcf_CoBaRo ./cputraces/429.mcf
+  920  ./ramulator_CoRoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/mcf_CoRoBa.txt ./cputraces/429.mcf
+  921  cd ./outputs/
+  922  ls
+  923  code mcf_CoBaRo 
+  924  code mcf_CoRoBa.txt 
+  925  cd ..
+  926  ./ramulator_RoCoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/mcf_RoCoBa.txt ./cputraces/429.mcf
+  927  gsettings set org.gnome.desktop.interface text-scaling-factor
+  928  gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
+  929  gsettings set org.gnome.desktop.interface text-scaling-factor 2.0
+  930  ls
+  931  cd ./ramulator/
+  932  ls
+  933  cd ../_ramulator/
+  934  ls
+  935  cd ./src/
+  936  ls
+  937  code Scheduler.h 
+  938  cd ..
+  939  make clean
+  940  make -j
+  941  ./ramulator_test ./configs/DDR4-config.cfg --mode=cpu ./cputraces/429.mcf
+  942  code ./src/Refresh.h
+  943  code ./src/Controller.h
+  944  make clean
+  945  code
+  946  code ./src/Request.h 
+  947  ./ramulator_test ./configs/DDR4-config.cfg --mode=cpu ./cputraces/429.mcf
+  948  make -j
+  949  ./ramulator_test ./configs/DDR4-config.cfg --mode=cpu ./cputraces/429.mcf
+  950  make clean
+  951  make -j
+  952  code ./src/Controller.cpp
+  953  grep -Ril "otherq" ./
+  954  code ./src/Refresh.cpp
+  955  cd ./s
+  956  cd ./src/
+  957  ls
+  958  code Config.h
+  959  cd ../configs/DDR4
+  960  code ../configs/DDR4-config.cfg 
+  961  cd ..
+  962  make clean
+  963  make -j
+  964  ./ramulator_test ./configs/DSARP-config.cfg --mode=cpu ./cputraces/429.mcf
+  965  make clean
+  966  rm -f ramulator_test 
+  967  ls
+  968  cd ./Downloads/
+  969  ls
+  970  cd ./comne/
+  971  ls
+  972  code restServer_get.js 
+  973  sudoa apt install curl
+  974  sudo apt install curl
+  975  curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+  976  sudo apt-get install -y nodejs
+  977  node --version
+  978  node restServer_get.js 
+  979  cd ./Downloads/
+  980  ls
+  981  cd ./comne/
+  982  ls
+  983  node restServer_get.js 
+  984  code about.html 
+  985  node restServer_get.js 
+  986  pwd
+  987  node restServer_get.js 
+  988  ls
+  989  cd ./_ramulator/
+  990  ls
+  991  cd ./cputraces
+  992  ls
+  993  gzip -d 470.lbm.gz 
+  994  ls
+  995  gzip -d 437.leslie3d.gz 
+  996  gzip -d 458.sjeng.gz 
+  997  gzip -d 456.hmmer.gz 
+  998  cd ..
+  999  ./ramulator_RoCoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/lbm_RoCoBa ./cputraces/470.lbm 
+ 1000  ./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/lbm_RoBaCo ./cputraces/470.lbm 
+ 1001  ./ramulator_BaRoCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/lbm_BaRoCo ./cputraces/470.lbm 
+ 1002  ./ramulator_BaCoRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/lbm_BaCoRo ./cputraces/470.lbm 
+ 1003  ./ramulator_CoRoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/lbm_CoRoBa ./cputraces/470.lbm 
+ 1004  ./ramulator_CoBaRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/lbm_CoBaRo ./cputraces/470.lbm 
+ 1005  cd ./outputs/
+ 1006  ls
+ 1007  cd ..
+ 1008  ./ramulator_RoCoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/GemsFDTD_RoCoBa ./cputraces/459.GemsFDTD
+ 1009  ./ramulator_CoRoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/GemsFDTD_CoRoBa ./cputraces/459.GemsFDTD
+ 1010  code ./src/Memory.h
+ 1011  make clean
+ 1012  make -j
+ 1013  ./ramulator_test ./configs/DDR4-config.cfg --mode=cpu ./cputraces/459.GemsFDTD
+ 1014  ./ramulator_CoBaRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/GemsFDTD_CoBaRo ./cputraces/459.GemsFDTD
+ 1015  ./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/hmmer_RoBaCo ./cputraces/456.hmmer 
+ 1016  ./ramulator_RoCoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/hmmer_RoCoBa ./cputraces/456.hmmer 
+ 1017  code ./outputs/hmmer_RoCoBa 
+ 1018  code ./outputs/hmmer_RoBaCo 
+ 1019  ./ramulator_BaRoCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/hmmer_BaRoCo ./cputraces/456.hmmer 
+ 1020  ./ramulator_BaCoRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/hmmer_BaCoRo ./cputraces/456.hmmer 
+ 1021  ./ramulator_CoRoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/hmmer_CoRoBa ./cputraces/456.hmmer 
+ 1022  ./ramulator_CoBaRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/hmmer_CoBaRo ./cputraces/456.hmmer 
+ 1023  cd ./outputs/
+ 1024  ls
+ 1025  cd ..
+ 1026  ls
+ 1027  ./ramulator_RoCoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/soplex_RoCoBa ./cputraces/450.soplex
+ 1028  ./ramulator_CoRoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/soplex_CoRoBa ./cputraces/450.soplex
+ 1029  ./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu ./cputraces/450.soplex
+ 1030  ls
+ 1031  code DDR4.stats 
+ 1032  code ./outputs/soplex_RoBaCo.txt 
+ 1033  ./ramulator_CoBaRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/soplex_CoBaRo ./cputraces/450.soplex
+ 1034  ls
+ 1035  cd ./outputs/
+ 1036  ls
+ 1037  cd ..
+ 1038  ./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/leslie3d_RoBaCo ./cputraces/437.leslie3d 
+ 1039  ./ramulator_RoCoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/leslie3d_RoCoBa ./cputraces/437.leslie3d 
+ 1040  ./ramulator_BaRoCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/leslie3d_BaRoCo ./cputraces/437.leslie3d 
+ 1041  ./ramulator_BaCoRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/leslie3d_BaCoRo ./cputraces/437.leslie3d 
+ 1042  ./ramulator_CoRoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/leslie3d_CoRoBa ./cputraces/437.leslie3d 
+ 1043  ./ramulator_CoBaRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/leslie3d_CoBaRo ./cputraces/437.leslie3d 
+ 1044  ls
+ 1045  cd ./outputs/
+ 1046  ls
+ 1047  ./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/leslie3d_RoBaCo ./cputraces/4
+ 1048  cd ..
+ 1049  ./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/sjeng_RoBaCo ./cputraces/458.sjeng 
+ 1050  ./ramulator_RoCoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/sjeng_RoCoBa ./cputraces/458.sjeng 
+ 1051  ./ramulator_BaRoCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/sjeng_BaRoCo ./cputraces/458.sjeng 
+ 1052  ./ramulator_BaCoRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/sjeng_BaCoRo ./cputraces/458.sjeng 
+ 1053  ./ramulator_CoBaRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/sjeng_CoBaRo ./cputraces/458.sjeng 
+ 1054  ./ramulator_CoRoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/sjeng_CoRoBa ./cputraces/458.sjeng 
+ 1055  cd ./outputs/
+ 1056  ls
+ 1057  cd ..
+ 1058  code ./.gitignore
+ 1059  mkdir _cputraces
+ 1060  git status
+ 1061  git add .
+ 1062  git commit -m "220518 simulation"
+ 1063  git push origin master
+ 1064  git pull
+ 1065  cd ./outputs/
+ 1066  ls
+ 1067  cd ..
+ 1068  ls
+ 1069  git pull
+ 1070  git status
+ 1071  git push origin master
+ 1072  ls
+ 1073  cd ./Downloads/
+ 1074  ls
+ 1075  cd ./comne/
+ 1076  git init
+ 1077  git status
+ 1078  git add .
+ 1079  git commit -m "initial commit"
+ 1080  git remote add origin https://github.com/Mungook/computer_network_pj.git
+ 1081  git push origin master
+ 1082  rm -r .git
+ 1083  y
+ 1084  ls
+ 1085  ll
+ 1086  git remote add https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/
+ 1087  git remote add https://github.com/Mungook/computer_network_pj.git
+ 1088  git remote add origin https://github.com/Mungook/computer_network_pj.git
+ 1089  git push origin master
+ 1090  ls
+ 1091  git clone https://github.com/Mungook/computer_network_pj.git
+ 1092  ls
+ 1093  mv about.html photo.jpg restServer_get.js restServer_post.js ./computer_network_pj/
+ 1094  ls
+ 1095  cd ./computer_network_pj/
+ 1096  git status
+ 1097  git add .
+ 1098  git commit -m "initial commit"
+ 1099  git push origin master
+ 1100  ls
+ 1101  cd ./_ramulator/
+ 1102  ls
+ 1103  code ram_shell
+ 1104  chmod 755 ram_shell 
+ 1105  ll
+ 1106  ./ram_shell 
+ 1107  cd ./cputraces
+ 1108  ls
+ 1109  cd ..
+ 1110  cd ./_cputraces/
+ 1111  ls
+ 1112  libq zeusmp
+ 1113  cd ..
+ 1114  history >> temp.txt

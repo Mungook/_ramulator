@@ -1,0 +1,25 @@
+#!/bin/bash
+
+
+./ramulator_RoCoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/zeusmp_RoCoBa.txt ./_cputraces/434.zeusmp
+./ramulator_CoRoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/zeusmp_CoRoBa.txt ./_cputraces/434.zeusmp
+./ramulator_CoBaRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/zeusmp_CoBaRo.txt ./_cputraces/434.zeusmp
+
+gzip -d ./_cputraces/462.libquantum.gz
+gzip -d ./_cputraces/433.milc.gz
+
+./ramulator_RoCoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/libquantum_RoCoBa.txt ./_cputraces/462.libquantum
+./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/libquantum_RoBaCo.txt ./_cputraces/462.libquantum
+./ramulator_BaRoCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/libquantum_BaRoCo.txt ./_cputraces/462.libquantum
+./ramulator_BaCoRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/libquantum_BaCoRo.txt ./_cputraces/462.libquantum
+./ramulator_CoBaRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/libquantum_CoBaRo.txt ./_cputraces/462.libquantum
+./ramulator_CoRoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/libquantum_CoRoBa.txt ./_cputraces/462.libquantum
+
+./ramulator_RoCoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/milc_RoCoBa.txt ./_cputraces/433.milc
+./ramulator_RoBaCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/milc_RoBaCo.txt ./_cputraces/433.milc
+./ramulator_BaRoCo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/milc_BaRoCo.txt ./_cputraces/433.milc
+./ramulator_BaCoRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/milc_BaCoRo.txt ./_cputraces/433.milc
+./ramulator_CoBaRo ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/milc_CoBaRo.txt ./_cputraces/433.milc
+./ramulator_CoRoBa ./configs/DDR4-config.cfg --mode=cpu --stats ./outputs/milc_CoRoBa.txt ./_cputraces/433.milc
+
+exit 0
